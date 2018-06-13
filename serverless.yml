@@ -15,7 +15,7 @@ custom:
 provider:
   name: aws
   runtime: nodejs8.10
-  stage: prod
+  stage: dev
   region: ap-southeast-2
 
   # 'iamRoleStatements' defines the permission policy for the Lambda function.
