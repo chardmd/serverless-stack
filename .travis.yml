@@ -1,9 +1,22 @@
+
 language: node_js
 node_js:
-- node
+  - node
 cache:
   directories:
     - node_modules
-script: 
-    - npm install -g serverless
-    - sls deploy
+deploy:
+ # deploy develop to the staging environment
+  provider: script
+  script: 
+      - npm install -g serverless
+      - sls deploy
+  on:
+    branch: dev
+  # deploy master to production
+  provider: script
+  script: 
+      - npm install -g serverless
+      - sls deploy --stage production
+  on:
+    branch: master
