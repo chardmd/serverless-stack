@@ -1,10 +1,10 @@
 #!/bin/bash
 
-echo $TRAVIS_BRANCH
-echo $TRAVIS_BRANCH = dev
+echo $TRAVIS_BRANCH == dev
 
-if [$TRAVIS_BRANCH = 'dev']; then
-    sls deploy
-else
-    sls deploy --stage production
+if [$TRAVIS_BRANCH == 'dev']; 
+    then 
+        sls deploy;
+    else 
+        sls deploy --stage production;
 fi
