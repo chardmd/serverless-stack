@@ -9,9 +9,7 @@ script:
     - npm test
 deploy:
   # deploy develop to the dev environment
-  provider: script
-  script: 
-    - npm install -g serverless
-    - sls deploy
-  on:
-    branch: dev
+  - provider: script
+    script: ./deploy.sh
+    on:
+      branch: dev
