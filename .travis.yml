@@ -7,13 +7,17 @@ cache:
 deploy:
   # deploy develop to the staging environment
   - provider: script
-    script: bash ./deploy.sh
+    script: 
+      - npm install -g serverless
+      - sls deploy
     skip_cleanup: true # do not delete the built assets
     on:
       branch: dev
   # deploy master to production
   - provider: script
     skip_cleanup: true # do not delete the built assets
-    script: bash ./deploy.sh
+    script: 
+      - npm install -g serverless
+      - sls deploy --stage production
     on:
       branch: master
