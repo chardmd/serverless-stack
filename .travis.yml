@@ -10,6 +10,6 @@ script:
 deploy:
   # deploy develop to the dev environment
   - provider: script
-    script: ./deploy.sh
+    script: bash ./deploy.sh
     on:
       branch: dev

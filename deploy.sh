@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "Test Deployment using Travis"
 echo $TRAVIS_BRANCH
