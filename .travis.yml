@@ -5,17 +5,13 @@ cache:
   directories:
     - node_modules
 deploy:
- # deploy develop to the staging environment
+  # deploy develop to the staging environment
   - provider: script
-    skip_cleanup: true # do not delete the built assets
     script: bash ./deploy.sh
     on:
       branch: dev
-    # deploy master to production
+  # deploy master to production
   - provider: script
-    skip_cleanup: true # do not delete the built assets
-    script: 
-        - npm install -g serverless
-        - sls deploy --stage production
+    script: bash ./deploy.sh
     on:
       branch: master
