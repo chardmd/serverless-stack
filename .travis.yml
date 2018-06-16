@@ -10,6 +10,8 @@ script:
 deploy:
   # deploy develop to the dev environment
   provider: script
-  script: ./deploy.sh
+  script: 
+    - npm install -g serverless
+    - sls deploy
   on:
     branch: dev
