@@ -9,7 +9,9 @@ script:
     - npm test
 deploy:
   # deploy develop to the dev environment
-    provider: script
-    script: bash ./deploy.sh
+  provider: script
+  script: 
+    - chmod ugo+x ./deploy.sh
+    - ./deploy.sh
     on:
       branch: dev
