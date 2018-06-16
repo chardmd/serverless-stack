@@ -13,6 +13,7 @@ deploy:
       branch: dev
     # deploy master to production
   - provider: script
+    skip_cleanup: true # do not delete the built assets
     script: 
         - npm install -g serverless
         - sls deploy --stage production
