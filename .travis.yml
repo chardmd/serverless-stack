@@ -8,6 +8,6 @@ cache:
 deploy:
   # deploy develop to the dev environment
     provider: script
-    script: sh deploy.sh
+    script: bash ./deploy.sh
     on:
       branch: dev
