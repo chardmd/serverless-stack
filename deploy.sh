@@ -1,8 +1,9 @@
 #!/bin/bash
 
-npm install -g serverless
+echo $TRAVIS_BRANCH
+echo $TRAVIS_BRANCH = dev
 
-if [$TRAVIS_BRANCH == 'dev']; then
+if [$TRAVIS_BRANCH = 'dev']; then
     sls deploy
 else
     sls deploy --stage production
