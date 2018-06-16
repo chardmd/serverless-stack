@@ -4,8 +4,10 @@ node_js:
 cache:
   directories:
     - node_modules
+script: 
+  - npm run test
 deploy:
-  # deploy develop to the staging environment
+  # deploy dev to the staging environment
   - provider: script
     script: bash ./deploy.sh
     skip_cleanup: true # do not delete the built assets
