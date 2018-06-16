@@ -1,6 +1,10 @@
 #!/bin/bash
 
-echo "Test Deployment using Travis"
+echo "bash ./deploy.sh"
 echo $TRAVIS_BRANCH
 npm install -g serverless
-sls deploy
+if [$TRAVIS_BRANCH == 'dev']; then
+    sls deploy
+else
+    sls deploy --stage production
+fi
