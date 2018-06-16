@@ -1,3 +1,5 @@
+echo "Test Deployment using Travis"
+echo $TRAVIS_BRANCH
 if [[ $TRAVIS_BRANCH == 'dev' ]]; then
   # Staging env variables
   npm install -g serverless
