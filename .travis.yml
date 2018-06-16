@@ -11,8 +11,9 @@ deploy:
   - provider: script
     script: bash ./deploy.sh
     skip_cleanup: true # do not delete the built assets
-    stripeSecretKey: 
-      secure: "g4fmuYHFR6VCn3cV186GCCNbfC//gjKedCmAFpyiiv5ABIrdNsmmS1SKPhN6ntPej1+/MBTf7a2jQMPNojg4Qh/fJ/X2T+HDSarAabduuU+6qrhmTMVlYSYhKJ6j5jfzEp0X0N9lBs+POSSnihHTMQq6/1bSdM1T/pPL9QR4v3TruLC8lvPcjcmx9pDwlzqcgbGQsJNHTyWddxAR0BzwOMk3+5+/7joOzA4zgTlQyImo3i0j+BZovTkZtODKy/HfDfu2cUOPZWTlPjSvwPycM+/Ripf4B8wDWMXloAiRTjow03gATW+Se3KSZ1sFC6wsrlmNCoBRLuZ8QWbppTNLPE9yIpyOkXq3icrT1/UcO9zKAPkPSYDiF2QxZkhGj5dpGqRsAxwFQk8N7ZWPNcbns9IpZNY9VuD2W+r56Wc088l/Wxi7UBZXdFBfIO4t40OvP4+lQ3LYKcuGbTFk/dcPZw7DY3tW+wikcRqakpwBV4Ir9/HknBKR4PnaADgAvpS4WGk0ZxlIG66Yw4IMozorQZga/+2CWebwhFqbAbyFxEjuriPy6CPi7q4CimLF4Akak+o+x4k6dXzIN2KhyfIkT8HTpf2JAbsEbFgacvkAWdl5s6ePhz5/Emlctkg5cSMBap9cIKJCXtxa3Hc0vdsrjo+eseZFjiS3GvTVpLEc+X0="
+    env:
+      # travis encrypt key=value
+      - secure: "c6wK2I2pI70NYVw30SbPmSAuPT1lfzECU0cVJXvYKO8XsmvPSk6ASIPmCa9qMfe4fJxBzCPY++m57pvk3LmEXi8IrS+NuOaCV++fTj2BoW9lEVaiNFJbyQYMDl5pQDOtgc9s1PCjbFgPfIXam9hwq6kchHM+xakzK7/MtOBnNrNpKifjSKOrYao126BtQTNbm2KPUamSbd8ffcq/cuzeKH+EU9gXvrG0I65EJ5dEpovvXnTnirOXGZYJch9FkRyliWCpBXErF0idYwWFlLsAfTH+teX/h+30KIKHxkKumTvCdMosnvcAemDMIS3pekfKcJyDyj64Tt9RO74Wtb1HobZ5rj08DcFqnub+ED5UBF9i31e1s3cQLynUw9qyVGkWT4L7jqhHYi+4Bg++Z+A+/EeI8w2w5zcw9icdFw2g0MuWly5YR3itVRvNcyUF5wyUgqvRiYmiaRnbXtIM4VySR6UT2M56xCsxt52pNTl6vkrgQ2Rn5yZcnG3Mu6k3QBHtDG1pL/6m/byrLI6ruZ3SKSt/Up6qFY60wxvy5p0yYvdybj5gIseAhdMCgdzpY7ofIcwMEkCv8xUHF8eWWdTBBo+dnEei9JdOjzxt+jJ+LpIy+N2tA4DoVrwt/VNJANlP/rxhDJmskOQtsfw3+3BFZJv5hU1mTbKhy9zhexYgKl0="
     on:
       branch: dev
   # deploy master to production
